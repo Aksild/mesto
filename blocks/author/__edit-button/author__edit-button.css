@@ -1,7 +1,8 @@
 .author__edit-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: url(../../../images/icon-edit.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
   width: 24px;
   height: 24px;
   border: 1px solid #ffffff;

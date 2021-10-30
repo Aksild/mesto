@@ -11,10 +11,8 @@
 @import url(../blocks/author/__info/author__info.css);
 @import url(../blocks/author/__text/author__text.css);
 @import url(../blocks/author/__edit-button/author__edit-button.css);
-@import url(../blocks/author/__edit-button/_crayon/author__edit-button_crayon.css);
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
-@import url(../blocks/profile/__add-button/_cross/profile__add-button_cross.css);
 @import url(../blocks/photo-grid/photo-grid.css);
 @import url(../blocks/photo-grid/__image/photo-grid__image.css);
 @import url(../blocks/photo-grid/__description/photo-grid__description.css);
