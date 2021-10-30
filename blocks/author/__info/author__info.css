@@ -1,0 +1,14 @@
+.author__info {
+  display: grid;
+  grid-template-columns: 294px 1fr;
+  grid-template-rows: auto;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .author__info {
+    text-align: center;
+    grid-template-columns: 189px 1fr;
+    grid-template-rows: auto;
+  }
+}

@@ -1,0 +1,11 @@
+.author {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .author {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}

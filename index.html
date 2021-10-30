@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Mesto</title>
+  </head>
+  <body class="page">
+    <div class="wrapper">
+      <header class="header">
+        <img
+          src="./images/header-logo.png"
+          alt="Логотип"
+          class="header__logo"
+        />
+        <img src="./images/header-line.png" alt="Линия" class="header__line" />
+      </header>
+      <main>
+        <section class="profile">
+          <div class="author">
+            <img src="./images/kusto.jpg" alt="Фото" class="author__photo" />
+            <div class="author__info">
+              <h1 class="author__name">Жак-Ив Кусто</h1>
+              <div class="author__edit-button">
+                <img
+                  class="author__edit-button_crayon"
+                  src="./images/icon-edit.png"
+                  alt="кнопка"
+                />
+              </div>
+              <p class="author__text">Исследователь океана</p>
+            </div>
+          </div>
+          <div class="profile__add-button">
+            <img
+              class="profile__add-button_cross"
+              src="./images/icon-cross.png"
+              alt="кнопка"
+            />
+          </div>
+        </section>
+        <section class="photo-grid">
+          <div class="photo-grid__rectangle">
+            <img
+              class="photo-grid__image"
+              src="./images/karachaevsk.jpg"
+              alt="пейзаж"
+            />
+            <div class="photo-grid__description">
+              <p class="photo-grid__text">Карачаевск</p>
+              <img
+                class="photo-grid__like-button"
+                src="./images/icon-heart.svg"
+                alt="сердце"
+              />
+            </div>
+          </div>
+          <div class="photo-grid__rectangle">
+            <img
+              class="photo-grid__image"
+              src="./images/elbrus.jpg"
+              alt="пейзаж"
+            />
+            <div class="photo-grid__description">
+              <p class="photo-grid__text">Гора Эльбрус</p>
+              <img
+                class="photo-grid__like-button"
+                src="./images/icon-heart.svg"
+                alt="сердце"
+              />
+            </div>
+          </div>
+          <div class="photo-grid__rectangle">
+            <img
+              class="photo-grid__image"
+              src="./images/dombai.jpg"
+              alt="пейзаж"
+            />
+            <div class="photo-grid__description">
+              <p class="photo-grid__text">Домбай</p>
+              <img
+                class="photo-grid__like-button"
+                src="./images/icon-heart.svg"
+                alt="сердце"
+              />
+            </div>
+          </div>
+          <div class="photo-grid__rectangle">
+            <img
+              class="photo-grid__image"
+              src="./images/elbrus.jpg"
+              alt="пейзаж"
+            />
+            <div class="photo-grid__description">
+              <p class="photo-grid__text">Гора Эльбрус</p>
+              <img
+                class="photo-grid__like-button"
+                src="./images/icon-heart.svg"
+                alt="сердце"
+              />
+            </div>
+          </div>
+          <div class="photo-grid__rectangle">
+            <img
+              class="photo-grid__image"
+              src="./images/dombai.jpg"
+              alt="пейзаж"
+            />
+            <div class="photo-grid__description">
+              <p class="photo-grid__text">Домбай</p>
+              <img
+                class="photo-grid__like-button"
+                src="./images/icon-heart.svg"
+                alt="сердце"
+              />
+            </div>
+          </div>
+          <div class="photo-grid__rectangle">
+            <img
+              class="photo-grid__image"
+              src="./images/karachaevsk.jpg"
+              alt="пейзаж"
+            />
+            <div class="photo-grid__description">
+              <p class="photo-grid__text">Карачаевск</p>
+              <img
+                class="photo-grid__like-button"
+                src="./images/icon-heart.svg"
+                alt="сердце"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="popup hidden">
+          <div class="popup__container">
+            <img
+              class="popup__close-button"
+              src="./images/icon-x.png"
+              alt="крест"
+            />
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form class="popup__form">
+              <input class="popup__text popup__text_name" type="text" name="username"/>
+              <input class="popup__text popup__text_info" type="text" name="userinfo"/>
+              <button type="submit" class="popup__submit">Сохранить</button>
+            </form>
+          </div>
+        </section>
+        <footer class="footer">
+          <p class="footer_copyright">&copy; 2020 Mesto Russia</p>
+        </footer>
+      </main>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

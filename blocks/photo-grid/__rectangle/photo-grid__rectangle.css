@@ -1,0 +1,5 @@
+.photo-grid__rectangle {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
