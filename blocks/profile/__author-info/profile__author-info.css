@@ -1,4 +1,4 @@
-.author__info {
+.profile__author-info {
   display: grid;
   grid-template-columns: 294px 1fr;
   grid-template-rows: auto;
@@ -6,9 +6,9 @@
 }
 
 @media (max-width: 768px) {
-  .author__info {
+  .profile__author-info {
     text-align: center;
     grid-template-columns: 189px 1fr;
-    grid-template-rows: auto;
+    margin-top: 4px;
   }
 }

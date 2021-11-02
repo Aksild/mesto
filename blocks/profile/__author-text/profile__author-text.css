@@ -1,13 +1,18 @@
-.author__text {
+.profile__author-text {
   color: white;
   font-size: 18px;
   line-height: 1.22;
   font-weight: 400;
   margin: 16px 0 0;
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  outline: none;
 }
 
 @media (max-width: 768px) {
-  .author__text {
+  .profile__author-text {
     font-size: 14px;
     line-height: 1.2;
     margin: 10px 0 0;

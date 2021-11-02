@@ -1,20 +1,16 @@
 const popupElement = document.querySelector(".popup");
 
-const editButton = document.querySelector(".author__edit-button");
+const editButton = document.querySelector(".profile__author-edit-button");
 
 const closeButton = document.querySelector(".popup__close-button");
 
-let authorName = document.querySelector(".author__name");
+let authorName = document.querySelector(".profile__author-name");
 
-let authorText = document.querySelector(".author__text");
+let authorText = document.querySelector(".profile__author-text");
 
-let nameInput = document.querySelector(".popup__text_name");
+let nameInput = document.querySelector(".popup__form_text_name");
 
-let infoInput = document.querySelector(".popup__text_info");
-
-nameInput.value = authorName.textContent;
-
-infoInput.value = authorText.textContent;
+let infoInput = document.querySelector(".popup__form_text_info");
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
@@ -27,11 +23,14 @@ function formSubmitHandler(evt) {
 popupElement.addEventListener("submit", formSubmitHandler);
 
 function openPopup() {
-  popupElement.classList.remove("hidden");
+  nameInput.value = authorName.textContent;
+  infoInput.value = authorText.textContent;
+
+  popupElement.classList.add("popup_opened");
 }
 
 function closePopup() {
-  popupElement.classList.add("hidden");
+  popupElement.classList.remove("popup_opened");
 }
 
 editButton.addEventListener("click", openPopup);

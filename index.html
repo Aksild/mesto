@@ -11,25 +11,29 @@
     <div class="wrapper">
       <header class="header">
         <img
-          src="./images/header-logo.png"
+          src="./images/header-logo.svg"
           alt="Логотип"
           class="header__logo"
         />
-        <img src="./images/header-line.png" alt="Линия" class="header__line" />
       </header>
       <main>
         <section class="profile">
-          <div class="author">
-            <img src="./images/kusto.jpg" alt="Фото" class="author__photo" />
-            <div class="author__info">
-              <h1 class="author__name">Жак-Ив Кусто</h1>
-              <button class="author__edit-button">
-              </button>
-              <p class="author__text">Исследователь океана</p>
+          <div class="profile__author">
+            <img
+              src="./images/kusto.jpg"
+              alt="Фото"
+              class="profile__author-photo"
+            />
+            <div class="profile__author-info">
+              <h1 class="profile__author-name">Жак-Ив Кусто</h1>
+              <button
+                class="profile__author-edit-button"
+                type="button"
+              ></button>
+              <p class="profile__author-text">Исследователь океана</p>
             </div>
           </div>
-          <button class="profile__add-button">
-          </button>
+          <button class="profile__add-button" type="button"></button>
         </section>
         <section class="photo-grid">
           <div class="photo-grid__rectangle">
@@ -39,12 +43,8 @@
               alt="пейзаж"
             />
             <div class="photo-grid__description">
-              <p class="photo-grid__text">Карачаевск</p>
-              <img
-                class="photo-grid__like-button"
-                src="./images/icon-heart.svg"
-                alt="сердце"
-              />
+              <h2 class="photo-grid__text">Карачаевск</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </div>
           <div class="photo-grid__rectangle">
@@ -54,12 +54,8 @@
               alt="пейзаж"
             />
             <div class="photo-grid__description">
-              <p class="photo-grid__text">Гора Эльбрус</p>
-              <img
-                class="photo-grid__like-button"
-                src="./images/icon-heart.svg"
-                alt="сердце"
-              />
+              <h2 class="photo-grid__text">Гора Эльбрус</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </div>
           <div class="photo-grid__rectangle">
@@ -69,12 +65,8 @@
               alt="пейзаж"
             />
             <div class="photo-grid__description">
-              <p class="photo-grid__text">Домбай</p>
-              <img
-                class="photo-grid__like-button"
-                src="./images/icon-heart.svg"
-                alt="сердце"
-              />
+              <h2 class="photo-grid__text">Домбай</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </div>
           <div class="photo-grid__rectangle">
@@ -84,12 +76,8 @@
               alt="пейзаж"
             />
             <div class="photo-grid__description">
-              <p class="photo-grid__text">Гора Эльбрус</p>
-              <img
-                class="photo-grid__like-button"
-                src="./images/icon-heart.svg"
-                alt="сердце"
-              />
+              <h2 class="photo-grid__text">Гора Эльбрус</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </div>
           <div class="photo-grid__rectangle">
@@ -99,12 +87,8 @@
               alt="пейзаж"
             />
             <div class="photo-grid__description">
-              <p class="photo-grid__text">Домбай</p>
-              <img
-                class="photo-grid__like-button"
-                src="./images/icon-heart.svg"
-                alt="сердце"
-              />
+              <h2 class="photo-grid__text">Домбай</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </div>
           <div class="photo-grid__rectangle">
@@ -114,34 +98,38 @@
               alt="пейзаж"
             />
             <div class="photo-grid__description">
-              <p class="photo-grid__text">Карачаевск</p>
-              <img
-                class="photo-grid__like-button"
-                src="./images/icon-heart.svg"
-                alt="сердце"
-              />
+              <h2 class="photo-grid__text">Карачаевск</h2>
+              <button class="photo-grid__like-button" type="button"></button>
             </div>
           </div>
         </section>
-        <section class="popup hidden">
+        <div class="popup">
           <div class="popup__container">
-            <img
-              class="popup__close-button"
-              src="./images/icon-x.png"
-              alt="крест"
-            />
+            <button class="popup__close-button" type="button"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form">
-              <input class="popup__text popup__text_name" type="text" name="username"/>
-              <input class="popup__text popup__text_info" type="text" name="userinfo"/>
+            <form class="popup__form" name="userform">
+              <div class="popup__field">
+                <input
+                  class="popup__form_text popup__form_text_name"
+                  type="text"
+                  name="username"
+                />
+              </div>
+              <div class="popup__field">
+                <input
+                  class="popup__form_text popup__form_text_info"
+                  type="text"
+                  name="userinfo"
+                />
+              </div>
               <button type="submit" class="popup__submit">Сохранить</button>
             </form>
           </div>
-        </section>
-        <footer class="footer">
-          <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
-        </footer>
+        </div>
       </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+      </footer>
     </div>
     <script src="./scripts/script.js"></script>
   </body>

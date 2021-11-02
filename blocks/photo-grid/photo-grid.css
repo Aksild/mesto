@@ -7,8 +7,9 @@
   margin-top: 51px;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 907px) {
   .photo-grid {
     padding: 0 19px;
+    margin-top: 36px;
   }
 }
