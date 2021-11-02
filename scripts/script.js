@@ -8,9 +8,9 @@ let authorName = document.querySelector(".profile__author-name");
 
 let authorText = document.querySelector(".profile__author-text");
 
-let nameInput = document.querySelector(".popup__field_text_name");
+let nameInput = document.querySelector(".popup__field-text_name");
 
-let infoInput = document.querySelector(".popup__field_text_info");
+let infoInput = document.querySelector(".popup__field-text_info");
 
 function formSubmitHandler(evt) {
   evt.preventDefault();
