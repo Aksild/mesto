@@ -3,4 +3,5 @@
   grid-template-columns: 80% 20%;
   grid-auto-rows: 79px;
   align-items: center;
+  grid-column: 1/3;
 }
