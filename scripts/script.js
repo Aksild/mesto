@@ -3,10 +3,14 @@
 const popupAuthor = document.querySelector("#author");
 const editButton = document.querySelector(".profile__author-edit-button");
 const closeButtons = document.querySelectorAll(".popup__close-button");
-let authortitle = document.querySelector(".profile__author-name");
-let authorText = document.querySelector(".profile__author-text");
-let authorNameInput = document.querySelector(".popup__field-text_author_name");
-let authorInfoInput = document.querySelector(".popup__field-text_author_info");
+const authorTitle = document.querySelector(".profile__author-name");
+const authorText = document.querySelector(".profile__author-text");
+const authorNameInput = document.querySelector(
+  ".popup__field-text_author_name"
+);
+const authorInfoInput = document.querySelector(
+  ".popup__field-text_author_info"
+);
 
 // Переменные попап с добавлением карточки
 
@@ -34,10 +38,8 @@ function openPopup(popup) {
 
 // Функция закрывания попапа
 
-function closePopups() {
-  popupAuthor.classList.remove("popup_opened");
-  popupCard.classList.remove("popup_opened");
-  popupPicture.classList.remove("popup_opened");
+function closePopup(popup) {
+  popup.classList.remove("popup_opened");
 }
 
 // Функция лайка
@@ -57,8 +59,8 @@ function createCard(title, imageUrl) {
 
   const likeButton = photoGridElement.querySelector(".photo-grid__like-button");
 
-  function like(card) {
-    card.classList.toggle("photo-grid__like-button_active");
+  function like(button) {
+    button.classList.toggle("photo-grid__like-button_active");
   }
 
   likeButton.addEventListener("click", function (evt) {
@@ -79,9 +81,13 @@ function createCard(title, imageUrl) {
     openPopup(popupPicture);
   });
 
-  photoGridSection.prepend(photoGridElement);
+  return photoGridElement;
 }
 
+function renderCard(title, imageUrl) {
+  const photoGridElement = createCard(title, imageUrl);
+  photoGridSection.prepend(photoGridElement);
+}
 // Функция лайка карточки
 
 // Присваивание данных с именем и профессией из попапа на страницу
@@ -89,7 +95,7 @@ function createCard(title, imageUrl) {
 popupAuthor.querySelector("form").addEventListener("submit", function (evt) {
   evt.preventDefault();
 
-  authortitle.textContent = authorNameInput.value;
+  authorTitle.textContent = authorNameInput.value;
   authorText.textContent = authorInfoInput.value;
   closePopups();
 });
@@ -98,7 +104,7 @@ popupAuthor.querySelector("form").addEventListener("submit", function (evt) {
 
 editButton.addEventListener("click", function (evt) {
   evt.preventDefault();
-  authorNameInput.value = authortitle.textContent;
+  authorNameInput.value = authorTitle.textContent;
   authorInfoInput.value = authorText.textContent;
   openPopup(popupAuthor);
 });
@@ -107,7 +113,9 @@ editButton.addEventListener("click", function (evt) {
 
 popupCard.querySelector("form").addEventListener("submit", function (evt) {
   evt.preventDefault();
-  createCard(cardTitleInput.value, cardPhotoInput.value);
+  renderCard(cardTitleInput.value, cardPhotoInput.value);
+  cardTitleInput.value = "";
+  cardPhotoInput.value = "";
   closePopups();
 });
 
@@ -119,7 +127,10 @@ addCardButton.addEventListener("click", function (evt) {
 // Метод закрывания попапа через обработчик события
 
 closeButtons.forEach((closeButton) => {
-  closeButton.addEventListener("click", closePopups);
+  closeButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    closePopup(closeButton.closest(".popup"));
+  });
 });
 
 // Массив для карточек по умолчанию
@@ -160,5 +171,5 @@ const initialCards = [
 // Метод присвоения фотографии и названия для созданной карточки при создании
 
 initialCards.forEach((cardData) => {
-  createCard(cardData.title, cardData.imageUrl);
+  renderCard(cardData.title, cardData.imageUrl);
 });

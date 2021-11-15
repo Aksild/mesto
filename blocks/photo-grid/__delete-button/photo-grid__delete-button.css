@@ -1,6 +1,6 @@
 .photo-grid__delete-button {
   background: url(../../../images/card-delete.svg);
-  background-size: 100%;
+  background-size: cover;
   background-position: 50%;
   background-repeat: no-repeat;
   height: 19px;
