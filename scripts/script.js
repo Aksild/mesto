@@ -97,7 +97,7 @@ popupAuthor.querySelector("form").addEventListener("submit", function (evt) {
 
   authorTitle.textContent = authorNameInput.value;
   authorText.textContent = authorInfoInput.value;
-  closePopups();
+  closePopup(popupAuthor);
 });
 
 // Присваивание данных с именем и профессией из страницы на попап
@@ -116,7 +116,7 @@ popupCard.querySelector("form").addEventListener("submit", function (evt) {
   renderCard(cardTitleInput.value, cardPhotoInput.value);
   cardTitleInput.value = "";
   cardPhotoInput.value = "";
-  closePopups();
+  closePopup(popupCard);
 });
 
 addCardButton.addEventListener("click", function (evt) {
