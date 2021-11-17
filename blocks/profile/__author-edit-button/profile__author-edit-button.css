@@ -8,6 +8,7 @@
   border: 1px solid #ffffff;
   margin: 35px 0 0 18px;
   cursor: pointer;
+  padding: 0;
 }
 
 .profile__author-edit-button:hover {
